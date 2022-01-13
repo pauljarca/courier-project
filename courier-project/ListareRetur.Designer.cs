@@ -40,13 +40,8 @@ namespace courier_project
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.coleteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.courierDbDataSet = new courier_project.courierDbDataSet();
-            this.sediiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sediiTableAdapter = new courier_project.courierDbDataSetTableAdapters.SediiTableAdapter();
-            this.tableAdapterManager = new courier_project.courierDbDataSetTableAdapters.TableAdapterManager();
-            this.coleteTableAdapter1 = new courier_project.courierDbDataSetTableAdapters.ColeteTableAdapter();
             this.coleteDataGridView = new System.Windows.Forms.DataGridView();
+            this.coleteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,12 +61,17 @@ namespace courier_project
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coleteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.coleteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.courierDbDataSet = new courier_project.courierDbDataSet();
+            this.sediiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sediiTableAdapter = new courier_project.courierDbDataSetTableAdapters.SediiTableAdapter();
+            this.tableAdapterManager = new courier_project.courierDbDataSetTableAdapters.TableAdapterManager();
+            this.coleteTableAdapter1 = new courier_project.courierDbDataSetTableAdapters.ColeteTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.coleteDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coleteBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coleteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courierDbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sediiBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coleteDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coleteBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -166,42 +166,6 @@ namespace courier_project
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(115, 22);
             this.textBox1.TabIndex = 12;
-            // 
-            // coleteBindingSource
-            // 
-            this.coleteBindingSource.DataMember = "Colete";
-            this.coleteBindingSource.DataSource = this.courierDbDataSet;
-            // 
-            // courierDbDataSet
-            // 
-            this.courierDbDataSet.DataSetName = "courierDbDataSet";
-            this.courierDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sediiBindingSource
-            // 
-            this.sediiBindingSource.DataMember = "Sedii";
-            this.sediiBindingSource.DataSource = this.courierDbDataSet;
-            // 
-            // sediiTableAdapter
-            // 
-            this.sediiTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ColeteTableAdapter = null;
-            this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.CurierSediiTableAdapter = null;
-            this.tableAdapterManager.CurierSubcontractoriTableAdapter = null;
-            this.tableAdapterManager.RuteTableAdapter = null;
-            this.tableAdapterManager.SediiTableAdapter = null;
-            this.tableAdapterManager.SubcontractoriTableAdapter = null;
-            this.tableAdapterManager.TarifTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = courier_project.courierDbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // coleteTableAdapter1
-            // 
-            this.coleteTableAdapter1.ClearBeforeFill = true;
             // 
             // coleteDataGridView
             // 
@@ -388,11 +352,47 @@ namespace courier_project
             this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
             this.dataGridViewTextBoxColumn19.Width = 125;
             // 
+            // coleteBindingSource
+            // 
+            this.coleteBindingSource.DataMember = "Colete";
+            this.coleteBindingSource.DataSource = this.courierDbDataSet;
+            // 
+            // courierDbDataSet
+            // 
+            this.courierDbDataSet.DataSetName = "courierDbDataSet";
+            this.courierDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sediiBindingSource
+            // 
+            this.sediiBindingSource.DataMember = "Sedii";
+            this.sediiBindingSource.DataSource = this.courierDbDataSet;
+            // 
+            // sediiTableAdapter
+            // 
+            this.sediiTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ColeteTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.CurierSediiTableAdapter = null;
+            this.tableAdapterManager.CurierSubcontractoriTableAdapter = null;
+            this.tableAdapterManager.RuteTableAdapter = null;
+            this.tableAdapterManager.SediiTableAdapter = null;
+            this.tableAdapterManager.SubcontractoriTableAdapter = null;
+            this.tableAdapterManager.TarifTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = courier_project.courierDbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // coleteTableAdapter1
+            // 
+            this.coleteTableAdapter1.ClearBeforeFill = true;
+            // 
             // ListareRetur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 629);
+            this.ClientSize = new System.Drawing.Size(1010, 629);
             this.Controls.Add(this.coleteDataGridView);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
@@ -407,11 +407,11 @@ namespace courier_project
             this.Name = "ListareRetur";
             this.Text = "ListareRetur";
             this.Load += new System.EventHandler(this.ListareRetur_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.coleteDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coleteBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coleteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.courierDbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sediiBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coleteDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.coleteBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

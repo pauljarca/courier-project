@@ -42,12 +42,13 @@ namespace courier_project
             else
             if (checkBox1.Checked == true)
             {
-                
-                sqlConn.Open();
-                cmd = new SqlCommand("SELECT  * FROM Colete WHERE DAY(DataExpeditie)=@data", sqlConn);
-                SqlDataAdapter sqlDa1 = new SqlDataAdapter(cmd);
 
-                cmd.Parameters.AddWithValue("@data",dateTimePicker1.Value.Day);
+                sqlConn.Open();
+                cmd = new SqlCommand("SELECT  * FROM Colete WHERE DAY(DataExpeditie)=@day AND MONTH(DataExpeditie)=@month AND YEAR(DataExpeditie)=@year", sqlConn);
+                SqlDataAdapter sqlDa1 = new SqlDataAdapter(cmd);
+                cmd.Parameters.AddWithValue("@year", dateTimePicker1.Value.Year);
+                cmd.Parameters.AddWithValue("@month", dateTimePicker1.Value.Month);
+                cmd.Parameters.AddWithValue("@day",dateTimePicker1.Value.Day);
                 cmd.ExecuteNonQuery();
                 dt = new DataTable();
                 sqlDa1.Fill(dt);
@@ -57,11 +58,12 @@ namespace courier_project
             else
                 if(checkBox2.Checked == true)
             {
-                
+
                 sqlConn.Open();
-                cmd = new SqlCommand("SELECT  * FROM Colete WHERE MONTH(DataExpeditie)=@data", sqlConn);
+                cmd = new SqlCommand("SELECT  * FROM Colete WHERE MONTH(DataExpeditie)=@month AND YEAR(DataExpeditie)=@year", sqlConn);
                 SqlDataAdapter sqlDa1 = new SqlDataAdapter(cmd);
-                cmd.Parameters.AddWithValue("@data", dateTimePicker1.Value.Month);
+                cmd.Parameters.AddWithValue("@year", dateTimePicker1.Value.Year);
+                cmd.Parameters.AddWithValue("@month", dateTimePicker1.Value.Month);
                 cmd.ExecuteNonQuery();
                 dt = new DataTable();
                 sqlDa1.Fill(dt);
@@ -69,10 +71,10 @@ namespace courier_project
                 sqlConn.Close();
 
             }
-            else
+			else
                 if(checkBox3.Checked == true)
             {
-                
+
                 sqlConn.Open();
                 cmd = new SqlCommand("SELECT  * FROM Colete WHERE YEAR(DataExpeditie)=@data", sqlConn);
                 SqlDataAdapter sqlDa1 = new SqlDataAdapter(cmd);
@@ -83,8 +85,6 @@ namespace courier_project
                 dataGridView1.DataSource = dt;
                 sqlConn.Close();
             }
-
-
 
         }
 

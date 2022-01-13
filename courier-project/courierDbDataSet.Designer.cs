@@ -842,6 +842,8 @@ namespace courier_project {
             
             private global::System.Data.DataColumn columnSediu;
             
+            private global::System.Data.DataColumn columnDataColectare;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ColeteDataTable() {
@@ -1029,6 +1031,14 @@ namespace courier_project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DataColectareColumn {
+                get {
+                    return this.columnDataColectare;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1082,7 +1092,8 @@ namespace courier_project {
                         System.DateTime DataLivrare, 
                         System.DateTime DataRetur, 
                         SubcontractoriRow parentSubcontractoriRowByFK__Colete__Subcontr__49C3F6B7, 
-                        SediiRow parentSediiRowByFK__Colete__Sediu__4AB81AF0) {
+                        SediiRow parentSediiRowByFK__Colete__Sediu__4AB81AF0, 
+                        System.DateTime DataColectare) {
                 ColeteRow rowColeteRow = ((ColeteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1103,7 +1114,8 @@ namespace courier_project {
                         DataLivrare,
                         DataRetur,
                         null,
-                        null};
+                        null,
+                        DataColectare};
                 if ((parentSubcontractoriRowByFK__Colete__Subcontr__49C3F6B7 != null)) {
                     columnValuesArray[17] = parentSubcontractoriRowByFK__Colete__Subcontr__49C3F6B7[0];
                 }
@@ -1158,6 +1170,7 @@ namespace courier_project {
                 this.columnDataRetur = base.Columns["DataRetur"];
                 this.columnSubcontractor = base.Columns["Subcontractor"];
                 this.columnSediu = base.Columns["Sediu"];
+                this.columnDataColectare = base.Columns["DataColectare"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1201,6 +1214,8 @@ namespace courier_project {
                 base.Columns.Add(this.columnSubcontractor);
                 this.columnSediu = new global::System.Data.DataColumn("Sediu", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSediu);
+                this.columnDataColectare = new global::System.Data.DataColumn("DataColectare", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDataColectare);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIdColet}, true));
                 this.columnIdColet.AutoIncrement = true;
@@ -3203,6 +3218,22 @@ namespace courier_project {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime DataColectare {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableColete.DataColectareColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'DataColectare\' in table \'Colete\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableColete.DataColectareColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public SediiRow SediiRow {
                 get {
                     return ((SediiRow)(this.GetParentRow(this.Table.ParentRelations["FK__Colete__Sediu__4AB81AF0"])));
@@ -3269,6 +3300,18 @@ namespace courier_project {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetSediuNull() {
                 this[this.tableColete.SediuColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDataColectareNull() {
+                return this.IsNull(this.tableColete.DataColectareColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDataColectareNull() {
+                this[this.tableColete.DataColectareColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4380,10 +4423,11 @@ namespace courier_project.courierDbDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("DataRetur", "DataRetur");
             tableMapping.ColumnMappings.Add("Subcontractor", "Subcontractor");
             tableMapping.ColumnMappings.Add("Sediu", "Sediu");
+            tableMapping.ColumnMappings.Add("DataColectare", "DataColectare");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Colete] WHERE (([IdColet] = @Original_IdColet) AND ([Expeditor] = @Original_Expeditor) AND ([Destinatar] = @Original_Destinatar) AND ([TelefonExpeditor] = @Original_TelefonExpeditor) AND ([TelefonDestinatar] = @Original_TelefonDestinatar) AND ([OrasA] = @Original_OrasA) AND ([OrasB] = @Original_OrasB) AND ([Masa] = @Original_Masa) AND ([Categorie] = @Original_Categorie) AND ([CostTransport] = @Original_CostTransport) AND ([TipCost] = @Original_TipCost) AND ([ValoareRamburs] = @Original_ValoareRamburs) AND ([RambursColectat] = @Original_RambursColectat) AND ([RefuzColectat] = @Original_RefuzColectat) AND ([DataExpeditie] = @Original_DataExpeditie) AND ((@IsNull_DataLivrare = 1 AND [DataLivrare] IS NULL) OR ([DataLivrare] = @Original_DataLivrare)) AND ((@IsNull_DataRetur = 1 AND [DataRetur] IS NULL) OR ([DataRetur] = @Original_DataRetur)) AND ((@IsNull_Subcontractor = 1 AND [Subcontractor] IS NULL) OR ([Subcontractor] = @Original_Subcontractor)) AND ((@IsNull_Sediu = 1 AND [Sediu] IS NULL) OR ([Sediu] = @Original_Sediu)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Colete] WHERE (([IdColet] = @Original_IdColet) AND ([Expeditor] = @Original_Expeditor) AND ([Destinatar] = @Original_Destinatar) AND ([TelefonExpeditor] = @Original_TelefonExpeditor) AND ([TelefonDestinatar] = @Original_TelefonDestinatar) AND ([OrasA] = @Original_OrasA) AND ([OrasB] = @Original_OrasB) AND ([Masa] = @Original_Masa) AND ([Categorie] = @Original_Categorie) AND ([CostTransport] = @Original_CostTransport) AND ([TipCost] = @Original_TipCost) AND ([ValoareRamburs] = @Original_ValoareRamburs) AND ([RambursColectat] = @Original_RambursColectat) AND ([RefuzColectat] = @Original_RefuzColectat) AND ([DataExpeditie] = @Original_DataExpeditie) AND ((@IsNull_DataLivrare = 1 AND [DataLivrare] IS NULL) OR ([DataLivrare] = @Original_DataLivrare)) AND ((@IsNull_DataRetur = 1 AND [DataRetur] IS NULL) OR ([DataRetur] = @Original_DataRetur)) AND ((@IsNull_Subcontractor = 1 AND [Subcontractor] IS NULL) OR ([Subcontractor] = @Original_Subcontractor)) AND ((@IsNull_Sediu = 1 AND [Sediu] IS NULL) OR ([Sediu] = @Original_Sediu)) AND ((@IsNull_DataColectare = 1 AND [DataColectare] IS NULL) OR ([DataColectare] = @Original_DataColectare)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdColet", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdColet", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expeditor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expeditor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4408,10 +4452,12 @@ namespace courier_project.courierDbDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Subcontractor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Subcontractor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Sediu", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sediu", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sediu", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sediu", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DataColectare", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataColectare", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DataColectare", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataColectare", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Colete] ([Expeditor], [Destinatar], [TelefonExpeditor], [TelefonDestinatar], [OrasA], [OrasB], [Masa], [Categorie], [CostTransport], [TipCost], [ValoareRamburs], [RambursColectat], [RefuzColectat], [DataExpeditie], [DataLivrare], [DataRetur], [Subcontractor], [Sediu]) VALUES (@Expeditor, @Destinatar, @TelefonExpeditor, @TelefonDestinatar, @OrasA, @OrasB, @Masa, @Categorie, @CostTransport, @TipCost, @ValoareRamburs, @RambursColectat, @RefuzColectat, @DataExpeditie, @DataLivrare, @DataRetur, @Subcontractor, @Sediu);
-SELECT IdColet, Expeditor, Destinatar, TelefonExpeditor, TelefonDestinatar, OrasA, OrasB, Masa, Categorie, CostTransport, TipCost, ValoareRamburs, RambursColectat, RefuzColectat, DataExpeditie, DataLivrare, DataRetur, Subcontractor, Sediu FROM Colete WHERE (IdColet = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Colete] ([Expeditor], [Destinatar], [TelefonExpeditor], [TelefonDestinatar], [OrasA], [OrasB], [Masa], [Categorie], [CostTransport], [TipCost], [ValoareRamburs], [RambursColectat], [RefuzColectat], [DataExpeditie], [DataLivrare], [DataRetur], [Subcontractor], [Sediu], [DataColectare]) VALUES (@Expeditor, @Destinatar, @TelefonExpeditor, @TelefonDestinatar, @OrasA, @OrasB, @Masa, @Categorie, @CostTransport, @TipCost, @ValoareRamburs, @RambursColectat, @RefuzColectat, @DataExpeditie, @DataLivrare, @DataRetur, @Subcontractor, @Sediu, @DataColectare);
+SELECT IdColet, Expeditor, Destinatar, TelefonExpeditor, TelefonDestinatar, OrasA, OrasB, Masa, Categorie, CostTransport, TipCost, ValoareRamburs, RambursColectat, RefuzColectat, DataExpeditie, DataLivrare, DataRetur, Subcontractor, Sediu, DataColectare FROM Colete WHERE (IdColet = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expeditor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expeditor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Destinatar", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Destinatar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4431,32 +4477,35 @@ SELECT IdColet, Expeditor, Destinatar, TelefonExpeditor, TelefonDestinatar, Oras
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataRetur", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataRetur", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Subcontractor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Subcontractor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sediu", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sediu", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataColectare", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataColectare", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[Colete] SET [Expeditor] = @Expeditor, [Destinatar] = @Destinatar, [" +
-                "TelefonExpeditor] = @TelefonExpeditor, [TelefonDestinatar] = @TelefonDestinatar," +
-                " [OrasA] = @OrasA, [OrasB] = @OrasB, [Masa] = @Masa, [Categorie] = @Categorie, [" +
-                "CostTransport] = @CostTransport, [TipCost] = @TipCost, [ValoareRamburs] = @Valoa" +
-                "reRamburs, [RambursColectat] = @RambursColectat, [RefuzColectat] = @RefuzColecta" +
-                "t, [DataExpeditie] = @DataExpeditie, [DataLivrare] = @DataLivrare, [DataRetur] =" +
-                " @DataRetur, [Subcontractor] = @Subcontractor, [Sediu] = @Sediu WHERE (([IdColet" +
-                "] = @Original_IdColet) AND ([Expeditor] = @Original_Expeditor) AND ([Destinatar]" +
-                " = @Original_Destinatar) AND ([TelefonExpeditor] = @Original_TelefonExpeditor) A" +
-                "ND ([TelefonDestinatar] = @Original_TelefonDestinatar) AND ([OrasA] = @Original_" +
-                "OrasA) AND ([OrasB] = @Original_OrasB) AND ([Masa] = @Original_Masa) AND ([Categ" +
-                "orie] = @Original_Categorie) AND ([CostTransport] = @Original_CostTransport) AND" +
-                " ([TipCost] = @Original_TipCost) AND ([ValoareRamburs] = @Original_ValoareRambur" +
-                "s) AND ([RambursColectat] = @Original_RambursColectat) AND ([RefuzColectat] = @O" +
-                "riginal_RefuzColectat) AND ([DataExpeditie] = @Original_DataExpeditie) AND ((@Is" +
-                "Null_DataLivrare = 1 AND [DataLivrare] IS NULL) OR ([DataLivrare] = @Original_Da" +
-                "taLivrare)) AND ((@IsNull_DataRetur = 1 AND [DataRetur] IS NULL) OR ([DataRetur]" +
-                " = @Original_DataRetur)) AND ((@IsNull_Subcontractor = 1 AND [Subcontractor] IS " +
-                "NULL) OR ([Subcontractor] = @Original_Subcontractor)) AND ((@IsNull_Sediu = 1 AN" +
-                "D [Sediu] IS NULL) OR ([Sediu] = @Original_Sediu)));\r\nSELECT IdColet, Expeditor," +
-                " Destinatar, TelefonExpeditor, TelefonDestinatar, OrasA, OrasB, Masa, Categorie," +
-                " CostTransport, TipCost, ValoareRamburs, RambursColectat, RefuzColectat, DataExp" +
-                "editie, DataLivrare, DataRetur, Subcontractor, Sediu FROM Colete WHERE (IdColet " +
-                "= @IdColet)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [Colete] SET [Expeditor] = @Expeditor, [Destinatar] = @Destinatar, [Telefo" +
+                "nExpeditor] = @TelefonExpeditor, [TelefonDestinatar] = @TelefonDestinatar, [Oras" +
+                "A] = @OrasA, [OrasB] = @OrasB, [Masa] = @Masa, [Categorie] = @Categorie, [CostTr" +
+                "ansport] = @CostTransport, [TipCost] = @TipCost, [ValoareRamburs] = @ValoareRamb" +
+                "urs, [RambursColectat] = @RambursColectat, [RefuzColectat] = @RefuzColectat, [Da" +
+                "taExpeditie] = @DataExpeditie, [DataLivrare] = @DataLivrare, [DataRetur] = @Data" +
+                "Retur, [Subcontractor] = @Subcontractor, [Sediu] = @Sediu, [DataColectare] = @Da" +
+                "taColectare WHERE (([IdColet] = @Original_IdColet) AND ([Expeditor] = @Original_" +
+                "Expeditor) AND ([Destinatar] = @Original_Destinatar) AND ([TelefonExpeditor] = @" +
+                "Original_TelefonExpeditor) AND ([TelefonDestinatar] = @Original_TelefonDestinata" +
+                "r) AND ([OrasA] = @Original_OrasA) AND ([OrasB] = @Original_OrasB) AND ([Masa] =" +
+                " @Original_Masa) AND ([Categorie] = @Original_Categorie) AND ([CostTransport] = " +
+                "@Original_CostTransport) AND ([TipCost] = @Original_TipCost) AND ([ValoareRambur" +
+                "s] = @Original_ValoareRamburs) AND ([RambursColectat] = @Original_RambursColecta" +
+                "t) AND ([RefuzColectat] = @Original_RefuzColectat) AND ([DataExpeditie] = @Origi" +
+                "nal_DataExpeditie) AND ((@IsNull_DataLivrare = 1 AND [DataLivrare] IS NULL) OR (" +
+                "[DataLivrare] = @Original_DataLivrare)) AND ((@IsNull_DataRetur = 1 AND [DataRet" +
+                "ur] IS NULL) OR ([DataRetur] = @Original_DataRetur)) AND ((@IsNull_Subcontractor" +
+                " = 1 AND [Subcontractor] IS NULL) OR ([Subcontractor] = @Original_Subcontractor)" +
+                ") AND ((@IsNull_Sediu = 1 AND [Sediu] IS NULL) OR ([Sediu] = @Original_Sediu)) A" +
+                "ND ((@IsNull_DataColectare = 1 AND [DataColectare] IS NULL) OR ([DataColectare] " +
+                "= @Original_DataColectare)));\r\nSELECT IdColet, Expeditor, Destinatar, TelefonExp" +
+                "editor, TelefonDestinatar, OrasA, OrasB, Masa, Categorie, CostTransport, TipCost" +
+                ", ValoareRamburs, RambursColectat, RefuzColectat, DataExpeditie, DataLivrare, Da" +
+                "taRetur, Subcontractor, Sediu, DataColectare FROM Colete WHERE (IdColet = @IdCol" +
+                "et)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Expeditor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expeditor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Destinatar", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Destinatar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4476,6 +4525,7 @@ SELECT IdColet, Expeditor, Destinatar, TelefonExpeditor, TelefonDestinatar, Oras
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataRetur", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataRetur", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Subcontractor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Subcontractor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sediu", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sediu", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DataColectare", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataColectare", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdColet", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdColet", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Expeditor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Expeditor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Destinatar", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Destinatar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4499,6 +4549,8 @@ SELECT IdColet, Expeditor, Destinatar, TelefonExpeditor, TelefonDestinatar, Oras
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Subcontractor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Subcontractor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Sediu", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sediu", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Sediu", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Sediu", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_DataColectare", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataColectare", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DataColectare", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DataColectare", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdColet", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IdColet", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -4515,10 +4567,7 @@ SELECT IdColet, Expeditor, Destinatar, TelefonExpeditor, TelefonDestinatar, Oras
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT IdColet, Expeditor, Destinatar, TelefonExpeditor, TelefonDestinatar, OrasA" +
-                ", OrasB, Masa, Categorie, CostTransport, TipCost, ValoareRamburs, RambursColecta" +
-                "t, RefuzColectat, DataExpeditie, DataLivrare, DataRetur, Subcontractor, Sediu FR" +
-                "OM dbo.Colete";
+            this._commandCollection[0].CommandText = @"SELECT IdColet, Expeditor, Destinatar, TelefonExpeditor, TelefonDestinatar, OrasA, OrasB, Masa, Categorie, CostTransport, TipCost, ValoareRamburs, RambursColectat, RefuzColectat, DataExpeditie, DataLivrare, DataRetur, Subcontractor, Sediu, DataColectare FROM Colete";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4598,7 +4647,8 @@ SELECT IdColet, Expeditor, Destinatar, TelefonExpeditor, TelefonDestinatar, Oras
                     global::System.Nullable<global::System.DateTime> Original_DataLivrare, 
                     global::System.Nullable<global::System.DateTime> Original_DataRetur, 
                     string Original_Subcontractor, 
-                    string Original_Sediu) {
+                    string Original_Sediu, 
+                    global::System.Nullable<global::System.DateTime> Original_DataColectare) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_IdColet));
             if ((Original_Expeditor == null)) {
                 throw new global::System.ArgumentNullException("Original_Expeditor");
@@ -4681,6 +4731,14 @@ SELECT IdColet, Expeditor, Destinatar, TelefonExpeditor, TelefonDestinatar, Oras
                 this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[22].Value = ((string)(Original_Sediu));
             }
+            if ((Original_DataColectare.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((System.DateTime)(Original_DataColectare.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4719,7 +4777,8 @@ SELECT IdColet, Expeditor, Destinatar, TelefonExpeditor, TelefonDestinatar, Oras
                     global::System.Nullable<global::System.DateTime> DataLivrare, 
                     global::System.Nullable<global::System.DateTime> DataRetur, 
                     string Subcontractor, 
-                    string Sediu) {
+                    string Sediu, 
+                    global::System.Nullable<global::System.DateTime> DataColectare) {
             if ((Expeditor == null)) {
                 throw new global::System.ArgumentNullException("Expeditor");
             }
@@ -4793,6 +4852,12 @@ SELECT IdColet, Expeditor, Destinatar, TelefonExpeditor, TelefonDestinatar, Oras
             else {
                 this.Adapter.InsertCommand.Parameters[17].Value = ((string)(Sediu));
             }
+            if ((DataColectare.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[18].Value = ((System.DateTime)(DataColectare.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4832,6 +4897,7 @@ SELECT IdColet, Expeditor, Destinatar, TelefonExpeditor, TelefonDestinatar, Oras
                     global::System.Nullable<global::System.DateTime> DataRetur, 
                     string Subcontractor, 
                     string Sediu, 
+                    global::System.Nullable<global::System.DateTime> DataColectare, 
                     int Original_IdColet, 
                     string Original_Expeditor, 
                     string Original_Destinatar, 
@@ -4851,6 +4917,7 @@ SELECT IdColet, Expeditor, Destinatar, TelefonExpeditor, TelefonDestinatar, Oras
                     global::System.Nullable<global::System.DateTime> Original_DataRetur, 
                     string Original_Subcontractor, 
                     string Original_Sediu, 
+                    global::System.Nullable<global::System.DateTime> Original_DataColectare, 
                     int IdColet) {
             if ((Expeditor == null)) {
                 throw new global::System.ArgumentNullException("Expeditor");
@@ -4925,89 +4992,103 @@ SELECT IdColet, Expeditor, Destinatar, TelefonExpeditor, TelefonDestinatar, Oras
             else {
                 this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Sediu));
             }
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_IdColet));
+            if ((DataColectare.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((System.DateTime)(DataColectare.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_IdColet));
             if ((Original_Expeditor == null)) {
                 throw new global::System.ArgumentNullException("Original_Expeditor");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_Expeditor));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_Expeditor));
             }
             if ((Original_Destinatar == null)) {
                 throw new global::System.ArgumentNullException("Original_Destinatar");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_Destinatar));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_Destinatar));
             }
             if ((Original_TelefonExpeditor == null)) {
                 throw new global::System.ArgumentNullException("Original_TelefonExpeditor");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_TelefonExpeditor));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_TelefonExpeditor));
             }
             if ((Original_TelefonDestinatar == null)) {
                 throw new global::System.ArgumentNullException("Original_TelefonDestinatar");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_TelefonDestinatar));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_TelefonDestinatar));
             }
             if ((Original_OrasA == null)) {
                 throw new global::System.ArgumentNullException("Original_OrasA");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_OrasA));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_OrasA));
             }
             if ((Original_OrasB == null)) {
                 throw new global::System.ArgumentNullException("Original_OrasB");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_OrasB));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_OrasB));
             }
             if ((Original_Masa == null)) {
                 throw new global::System.ArgumentNullException("Original_Masa");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_Masa));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_Masa));
             }
-            this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(Original_Categorie));
-            this.Adapter.UpdateCommand.Parameters[27].Value = ((double)(Original_CostTransport));
-            this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(Original_TipCost));
-            this.Adapter.UpdateCommand.Parameters[29].Value = ((double)(Original_ValoareRamburs));
-            this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(Original_RambursColectat));
-            this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(Original_RefuzColectat));
-            this.Adapter.UpdateCommand.Parameters[32].Value = ((System.DateTime)(Original_DataExpeditie));
+            this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(Original_Categorie));
+            this.Adapter.UpdateCommand.Parameters[28].Value = ((double)(Original_CostTransport));
+            this.Adapter.UpdateCommand.Parameters[29].Value = ((int)(Original_TipCost));
+            this.Adapter.UpdateCommand.Parameters[30].Value = ((double)(Original_ValoareRamburs));
+            this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(Original_RambursColectat));
+            this.Adapter.UpdateCommand.Parameters[32].Value = ((int)(Original_RefuzColectat));
+            this.Adapter.UpdateCommand.Parameters[33].Value = ((System.DateTime)(Original_DataExpeditie));
             if ((Original_DataLivrare.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((System.DateTime)(Original_DataLivrare.Value));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((System.DateTime)(Original_DataLivrare.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
             }
             if ((Original_DataRetur.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((System.DateTime)(Original_DataRetur.Value));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((System.DateTime)(Original_DataRetur.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
             }
             if ((Original_Subcontractor == null)) {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(Original_Subcontractor));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((string)(Original_Subcontractor));
             }
             if ((Original_Sediu == null)) {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_Sediu));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((string)(Original_Sediu));
             }
-            this.Adapter.UpdateCommand.Parameters[41].Value = ((int)(IdColet));
+            if ((Original_DataColectare.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((System.DateTime)(Original_DataColectare.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[44].Value = ((int)(IdColet));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5047,6 +5128,7 @@ SELECT IdColet, Expeditor, Destinatar, TelefonExpeditor, TelefonDestinatar, Oras
                     global::System.Nullable<global::System.DateTime> DataRetur, 
                     string Subcontractor, 
                     string Sediu, 
+                    global::System.Nullable<global::System.DateTime> DataColectare, 
                     int Original_IdColet, 
                     string Original_Expeditor, 
                     string Original_Destinatar, 
@@ -5065,8 +5147,9 @@ SELECT IdColet, Expeditor, Destinatar, TelefonExpeditor, TelefonDestinatar, Oras
                     global::System.Nullable<global::System.DateTime> Original_DataLivrare, 
                     global::System.Nullable<global::System.DateTime> Original_DataRetur, 
                     string Original_Subcontractor, 
-                    string Original_Sediu) {
-            return this.Update(Expeditor, Destinatar, TelefonExpeditor, TelefonDestinatar, OrasA, OrasB, Masa, Categorie, CostTransport, TipCost, ValoareRamburs, RambursColectat, RefuzColectat, DataExpeditie, DataLivrare, DataRetur, Subcontractor, Sediu, Original_IdColet, Original_Expeditor, Original_Destinatar, Original_TelefonExpeditor, Original_TelefonDestinatar, Original_OrasA, Original_OrasB, Original_Masa, Original_Categorie, Original_CostTransport, Original_TipCost, Original_ValoareRamburs, Original_RambursColectat, Original_RefuzColectat, Original_DataExpeditie, Original_DataLivrare, Original_DataRetur, Original_Subcontractor, Original_Sediu, Original_IdColet);
+                    string Original_Sediu, 
+                    global::System.Nullable<global::System.DateTime> Original_DataColectare) {
+            return this.Update(Expeditor, Destinatar, TelefonExpeditor, TelefonDestinatar, OrasA, OrasB, Masa, Categorie, CostTransport, TipCost, ValoareRamburs, RambursColectat, RefuzColectat, DataExpeditie, DataLivrare, DataRetur, Subcontractor, Sediu, DataColectare, Original_IdColet, Original_Expeditor, Original_Destinatar, Original_TelefonExpeditor, Original_TelefonDestinatar, Original_OrasA, Original_OrasB, Original_Masa, Original_Categorie, Original_CostTransport, Original_TipCost, Original_ValoareRamburs, Original_RambursColectat, Original_RefuzColectat, Original_DataExpeditie, Original_DataLivrare, Original_DataRetur, Original_Subcontractor, Original_Sediu, Original_DataColectare, Original_IdColet);
         }
     }
     

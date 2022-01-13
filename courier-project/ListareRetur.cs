@@ -61,13 +61,15 @@ namespace courier_project
                 cmd.ExecuteNonQuery();
                 SqlDataReader rdr= cmd.ExecuteReader();
                 rdr.Read();
-                if (rdr["ValRam"].ToString().Equals("NULL"))
+                if (rdr["ValRam"].ToString().Equals(""))
                 {
-                    MessageBox.Show("")
+                    MessageBox.Show("Nu exista valori de afisat");
                 }
-                float valRam = float.Parse(rdr["ValRam"].ToString());
-                
-                textBox1.Text = valRam.ToString();
+                else
+                {
+                    float valRam = float.Parse(rdr["ValRam"].ToString());
+                    textBox1.Text = valRam.ToString();
+                }
             }
             sqlConn.Close();
         }
