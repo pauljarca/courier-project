@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Colete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Colete.Designer.cs">
+      <DependentUpon>Colete.cs</DependentUpon>
+    </Compile>
     <Compile Include="courierDbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -80,10 +86,31 @@
     <Compile Include="ListareRetur.Designer.cs">
       <DependentUpon>ListareRetur.cs</DependentUpon>
     </Compile>
+    <Compile Include="PlanTarifar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanTarifar.Designer.cs">
+      <DependentUpon>PlanTarifar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rute.Designer.cs">
+      <DependentUpon>Rute.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Colete.resx">
+      <DependentUpon>Colete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ListareRetur.resx">
       <DependentUpon>ListareRetur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanTarifar.resx">
+      <DependentUpon>PlanTarifar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -94,6 +121,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Rute.resx">
+      <DependentUpon>Rute.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="courierDbDataSet.xsc">
       <DependentUpon>courierDbDataSet.xsd</DependentUpon>
     </None>
