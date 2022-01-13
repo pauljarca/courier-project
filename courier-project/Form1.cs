@@ -23,5 +23,12 @@ namespace courier_project
             lps.ShowDialog();
             this.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ExpeditiiPeData epd = new ExpeditiiPeData();
+            epd.ShowDialog();
+            this.Close();
+        }
     }
 }
