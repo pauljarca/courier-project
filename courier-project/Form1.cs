@@ -46,5 +46,16 @@ namespace courier_project
             ListareLivrariZi f = new ListareLivrariZi();
             f.Show();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            ExpeditiiPeData f = new ExpeditiiPeData();
+            f.Show();
+        }
+        private void button6_Click(object sender, EventArgs e)
+        {
+            LivrariPeSaptamana f = new LivrariPeSaptamana();
+            f.Show();
+        }
     }
 }

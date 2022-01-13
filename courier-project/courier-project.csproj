@@ -74,6 +74,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>courierDbDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ExpeditiiPeData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpeditiiPeData.Designer.cs">
+      <DependentUpon>ExpeditiiPeData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,12 @@
     <Compile Include="ListareRetur.Designer.cs">
       <DependentUpon>ListareRetur.cs</DependentUpon>
     </Compile>
+    <Compile Include="LivrariPeSaptamana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LivrariPeSaptamana.Designer.cs">
+      <DependentUpon>LivrariPeSaptamana.cs</DependentUpon>
+    </Compile>
     <Compile Include="PlanTarifar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -109,6 +121,9 @@
     <EmbeddedResource Include="Colete.resx">
       <DependentUpon>Colete.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExpeditiiPeData.resx">
+      <DependentUpon>ExpeditiiPeData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListareRetur.resx">
       <DependentUpon>ListareRetur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LivrariPeSaptamana.resx">
+      <DependentUpon>LivrariPeSaptamana.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlanTarifar.resx">
       <DependentUpon>PlanTarifar.cs</DependentUpon>
