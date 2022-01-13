@@ -16,5 +16,12 @@ namespace courier_project
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LivrariPeSaptamana lps = new LivrariPeSaptamana();
+            lps.ShowDialog();
+            this.Close();
+        }
     }
 }
