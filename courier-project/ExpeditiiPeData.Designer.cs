@@ -34,15 +34,15 @@ namespace courier_project
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.sediiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.courierDbDataSet = new courier_project.courierDbDataSet();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.courierDbDataSet = new courier_project.courierDbDataSet();
-            this.sediiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sediiTableAdapter = new courier_project.courierDbDataSetTableAdapters.SediiTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courierDbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sediiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courierDbDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -76,6 +76,16 @@ namespace courier_project
             this.comboBox2.TabIndex = 8;
             this.comboBox2.ValueMember = "Oras";
             // 
+            // sediiBindingSource
+            // 
+            this.sediiBindingSource.DataMember = "Sedii";
+            this.sediiBindingSource.DataSource = this.courierDbDataSet;
+            // 
+            // courierDbDataSet
+            // 
+            this.courierDbDataSet.DataSetName = "courierDbDataSet";
+            this.courierDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -90,16 +100,6 @@ namespace courier_project
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 12;
-            // 
-            // courierDbDataSet
-            // 
-            this.courierDbDataSet.DataSetName = "courierDbDataSet";
-            this.courierDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sediiBindingSource
-            // 
-            this.sediiBindingSource.DataMember = "Sedii";
-            this.sediiBindingSource.DataSource = this.courierDbDataSet;
             // 
             // sediiTableAdapter
             // 
@@ -128,11 +128,12 @@ namespace courier_project
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ExpeditiiPeData";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Expediile pe data";
             this.Load += new System.EventHandler(this.ExpeditiiPeData_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.courierDbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sediiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.courierDbDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

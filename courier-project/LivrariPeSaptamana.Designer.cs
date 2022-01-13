@@ -61,6 +61,7 @@ namespace courier_project
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 0;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
@@ -80,6 +81,7 @@ namespace courier_project
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 2;
             this.comboBox2.ValueMember = "Oras";
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // sediiBindingSource
             // 
@@ -149,6 +151,7 @@ namespace courier_project
             this.Controls.Add(this.comboBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LivrariPeSaptamana";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Livrari Pe Saptamana";
             this.Load += new System.EventHandler(this.LivrariPeSaptamana_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
