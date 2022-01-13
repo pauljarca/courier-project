@@ -16,5 +16,29 @@ namespace courier_project
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Rute f = new Rute(); 
+            f.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Colete f = new Colete(); 
+            f.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            PlanTarifar f = new PlanTarifar(); 
+            f.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ListareRetur f = new ListareRetur(); 
+            f.Show();
+        }
     }
 }

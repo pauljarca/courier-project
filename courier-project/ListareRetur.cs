@@ -17,12 +17,15 @@ namespace courier_project
         SqlConnection sqlConn = new SqlConnection(connString);
         SqlCommand cmd;
         DataTable dt = new DataTable();
+
+        public ListareRetur()
+        {
+            InitializeComponent();
+        }
         private void ListareRetur_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'courierDbDataSet.Sedii' table. You can move, or remove it, as needed.
+
             this.sediiTableAdapter.Fill(this.courierDbDataSet.Sedii);
-            // TODO: This line of code loads data into the 'courierDbDataSet.Colete' table. You can move, or remove it, as needed.
-            this.coleteTableAdapter.Fill(this.courierDbDataSet.Colete);
 
         }
 
@@ -33,15 +36,39 @@ namespace courier_project
                 MessageBox.Show("Data nu poate fi trecuta de azi.");
             else
             {
-                cmd = new SqlCommand("SELECT  * FROM Colete WHERE Sediu=@Sediu", sqlConn);
+                cmd = new SqlCommand("SELECT  * FROM Colete WHERE DAY(DataRetur)=@data", sqlConn);
                 SqlDataAdapter sqlDa = new SqlDataAdapter(cmd);
-                cmd.Parameters.AddWithValue("@Sediu", textBox1.Text);
+                cmd.Parameters.AddWithValue("@data", dateTimePicker1.Value.Day);
                 cmd.ExecuteNonQuery();
                 dt = new DataTable();
                 sqlDa.Fill(dt);
-                dataGridView1.DataSource = dt;
+                coleteDataGridView.DataSource = dt;
             }
 
+            sqlConn.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            sqlConn.Open();
+            if (dateTimePicker2.Value.CompareTo(DateTime.Today) > 0)
+                MessageBox.Show("Data nu poate fi trecuta de azi.");
+            else
+            {
+                cmd = new SqlCommand("SELECT SUM(ValoareRamburs) AS ValRam FROM Colete WHERE MONTH(DataLivrare)=@luna AND YEAR(DataLivrare)=@an", sqlConn);
+                cmd.Parameters.AddWithValue("@luna", dateTimePicker2.Value.Month);
+                cmd.Parameters.AddWithValue("@an", dateTimePicker2.Value.Year);
+                cmd.ExecuteNonQuery();
+                SqlDataReader rdr= cmd.ExecuteReader();
+                rdr.Read();
+                if (rdr["ValRam"].ToString().Equals("NULL"))
+                {
+                    MessageBox.Show("")
+                }
+                float valRam = float.Parse(rdr["ValRam"].ToString());
+                
+                textBox1.Text = valRam.ToString();
+            }
             sqlConn.Close();
         }
     }

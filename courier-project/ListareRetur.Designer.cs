@@ -31,34 +31,8 @@ namespace courier_project
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idColetDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.expeditorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.destinatarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonExpeditorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonDestinatarDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orasADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orasBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.masaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categorieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.costTransportDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipCostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valoareRambursDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rambursColectatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.refuzColectatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataExpeditieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataLivrareDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataReturDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subcontractorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sediuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coleteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.courierDbDataSet = new courier_project.courierDbDataSet();
-            this.coleteTableAdapter = new courier_project.courierDbDataSetTableAdapters.ColeteTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.sediiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sediiTableAdapter = new courier_project.courierDbDataSetTableAdapters.SediiTableAdapter();
-            this.tableAdapterManager = new courier_project.courierDbDataSetTableAdapters.TableAdapterManager();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -66,10 +40,38 @@ namespace courier_project
             this.label5 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.coleteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.courierDbDataSet = new courier_project.courierDbDataSet();
+            this.sediiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sediiTableAdapter = new courier_project.courierDbDataSetTableAdapters.SediiTableAdapter();
+            this.tableAdapterManager = new courier_project.courierDbDataSetTableAdapters.TableAdapterManager();
+            this.coleteTableAdapter1 = new courier_project.courierDbDataSetTableAdapters.ColeteTableAdapter();
+            this.coleteDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coleteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.coleteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courierDbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sediiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coleteDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coleteBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -82,205 +84,6 @@ namespace courier_project
             this.label1.TabIndex = 0;
             this.label1.Text = "Listarea retururilor intr-o zi/firma, determinarea valorii rambursurilor pe luna/" +
     "firma.";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idColetDataGridViewTextBoxColumn,
-            this.expeditorDataGridViewTextBoxColumn,
-            this.destinatarDataGridViewTextBoxColumn,
-            this.telefonExpeditorDataGridViewTextBoxColumn,
-            this.telefonDestinatarDataGridViewTextBoxColumn,
-            this.orasADataGridViewTextBoxColumn,
-            this.orasBDataGridViewTextBoxColumn,
-            this.masaDataGridViewTextBoxColumn,
-            this.categorieDataGridViewTextBoxColumn,
-            this.costTransportDataGridViewTextBoxColumn,
-            this.tipCostDataGridViewTextBoxColumn,
-            this.valoareRambursDataGridViewTextBoxColumn,
-            this.rambursColectatDataGridViewTextBoxColumn,
-            this.refuzColectatDataGridViewTextBoxColumn,
-            this.dataExpeditieDataGridViewTextBoxColumn,
-            this.dataLivrareDataGridViewTextBoxColumn,
-            this.dataReturDataGridViewTextBoxColumn,
-            this.subcontractorDataGridViewTextBoxColumn,
-            this.sediuDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.coleteBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 215);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(760, 320);
-            this.dataGridView1.TabIndex = 1;
-            // 
-            // idColetDataGridViewTextBoxColumn
-            // 
-            this.idColetDataGridViewTextBoxColumn.DataPropertyName = "IdColet";
-            this.idColetDataGridViewTextBoxColumn.HeaderText = "IdColet";
-            this.idColetDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idColetDataGridViewTextBoxColumn.Name = "idColetDataGridViewTextBoxColumn";
-            this.idColetDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idColetDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // expeditorDataGridViewTextBoxColumn
-            // 
-            this.expeditorDataGridViewTextBoxColumn.DataPropertyName = "Expeditor";
-            this.expeditorDataGridViewTextBoxColumn.HeaderText = "Expeditor";
-            this.expeditorDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.expeditorDataGridViewTextBoxColumn.Name = "expeditorDataGridViewTextBoxColumn";
-            this.expeditorDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // destinatarDataGridViewTextBoxColumn
-            // 
-            this.destinatarDataGridViewTextBoxColumn.DataPropertyName = "Destinatar";
-            this.destinatarDataGridViewTextBoxColumn.HeaderText = "Destinatar";
-            this.destinatarDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.destinatarDataGridViewTextBoxColumn.Name = "destinatarDataGridViewTextBoxColumn";
-            this.destinatarDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // telefonExpeditorDataGridViewTextBoxColumn
-            // 
-            this.telefonExpeditorDataGridViewTextBoxColumn.DataPropertyName = "TelefonExpeditor";
-            this.telefonExpeditorDataGridViewTextBoxColumn.HeaderText = "TelefonExpeditor";
-            this.telefonExpeditorDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.telefonExpeditorDataGridViewTextBoxColumn.Name = "telefonExpeditorDataGridViewTextBoxColumn";
-            this.telefonExpeditorDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // telefonDestinatarDataGridViewTextBoxColumn
-            // 
-            this.telefonDestinatarDataGridViewTextBoxColumn.DataPropertyName = "TelefonDestinatar";
-            this.telefonDestinatarDataGridViewTextBoxColumn.HeaderText = "TelefonDestinatar";
-            this.telefonDestinatarDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.telefonDestinatarDataGridViewTextBoxColumn.Name = "telefonDestinatarDataGridViewTextBoxColumn";
-            this.telefonDestinatarDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // orasADataGridViewTextBoxColumn
-            // 
-            this.orasADataGridViewTextBoxColumn.DataPropertyName = "OrasA";
-            this.orasADataGridViewTextBoxColumn.HeaderText = "OrasA";
-            this.orasADataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.orasADataGridViewTextBoxColumn.Name = "orasADataGridViewTextBoxColumn";
-            this.orasADataGridViewTextBoxColumn.Width = 125;
-            // 
-            // orasBDataGridViewTextBoxColumn
-            // 
-            this.orasBDataGridViewTextBoxColumn.DataPropertyName = "OrasB";
-            this.orasBDataGridViewTextBoxColumn.HeaderText = "OrasB";
-            this.orasBDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.orasBDataGridViewTextBoxColumn.Name = "orasBDataGridViewTextBoxColumn";
-            this.orasBDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // masaDataGridViewTextBoxColumn
-            // 
-            this.masaDataGridViewTextBoxColumn.DataPropertyName = "Masa";
-            this.masaDataGridViewTextBoxColumn.HeaderText = "Masa";
-            this.masaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.masaDataGridViewTextBoxColumn.Name = "masaDataGridViewTextBoxColumn";
-            this.masaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // categorieDataGridViewTextBoxColumn
-            // 
-            this.categorieDataGridViewTextBoxColumn.DataPropertyName = "Categorie";
-            this.categorieDataGridViewTextBoxColumn.HeaderText = "Categorie";
-            this.categorieDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.categorieDataGridViewTextBoxColumn.Name = "categorieDataGridViewTextBoxColumn";
-            this.categorieDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // costTransportDataGridViewTextBoxColumn
-            // 
-            this.costTransportDataGridViewTextBoxColumn.DataPropertyName = "CostTransport";
-            this.costTransportDataGridViewTextBoxColumn.HeaderText = "CostTransport";
-            this.costTransportDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.costTransportDataGridViewTextBoxColumn.Name = "costTransportDataGridViewTextBoxColumn";
-            this.costTransportDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // tipCostDataGridViewTextBoxColumn
-            // 
-            this.tipCostDataGridViewTextBoxColumn.DataPropertyName = "TipCost";
-            this.tipCostDataGridViewTextBoxColumn.HeaderText = "TipCost";
-            this.tipCostDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tipCostDataGridViewTextBoxColumn.Name = "tipCostDataGridViewTextBoxColumn";
-            this.tipCostDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // valoareRambursDataGridViewTextBoxColumn
-            // 
-            this.valoareRambursDataGridViewTextBoxColumn.DataPropertyName = "ValoareRamburs";
-            this.valoareRambursDataGridViewTextBoxColumn.HeaderText = "ValoareRamburs";
-            this.valoareRambursDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.valoareRambursDataGridViewTextBoxColumn.Name = "valoareRambursDataGridViewTextBoxColumn";
-            this.valoareRambursDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // rambursColectatDataGridViewTextBoxColumn
-            // 
-            this.rambursColectatDataGridViewTextBoxColumn.DataPropertyName = "RambursColectat";
-            this.rambursColectatDataGridViewTextBoxColumn.HeaderText = "RambursColectat";
-            this.rambursColectatDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.rambursColectatDataGridViewTextBoxColumn.Name = "rambursColectatDataGridViewTextBoxColumn";
-            this.rambursColectatDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // refuzColectatDataGridViewTextBoxColumn
-            // 
-            this.refuzColectatDataGridViewTextBoxColumn.DataPropertyName = "RefuzColectat";
-            this.refuzColectatDataGridViewTextBoxColumn.HeaderText = "RefuzColectat";
-            this.refuzColectatDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.refuzColectatDataGridViewTextBoxColumn.Name = "refuzColectatDataGridViewTextBoxColumn";
-            this.refuzColectatDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dataExpeditieDataGridViewTextBoxColumn
-            // 
-            this.dataExpeditieDataGridViewTextBoxColumn.DataPropertyName = "DataExpeditie";
-            this.dataExpeditieDataGridViewTextBoxColumn.HeaderText = "DataExpeditie";
-            this.dataExpeditieDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dataExpeditieDataGridViewTextBoxColumn.Name = "dataExpeditieDataGridViewTextBoxColumn";
-            this.dataExpeditieDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dataLivrareDataGridViewTextBoxColumn
-            // 
-            this.dataLivrareDataGridViewTextBoxColumn.DataPropertyName = "DataLivrare";
-            this.dataLivrareDataGridViewTextBoxColumn.HeaderText = "DataLivrare";
-            this.dataLivrareDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dataLivrareDataGridViewTextBoxColumn.Name = "dataLivrareDataGridViewTextBoxColumn";
-            this.dataLivrareDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dataReturDataGridViewTextBoxColumn
-            // 
-            this.dataReturDataGridViewTextBoxColumn.DataPropertyName = "DataRetur";
-            this.dataReturDataGridViewTextBoxColumn.HeaderText = "DataRetur";
-            this.dataReturDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dataReturDataGridViewTextBoxColumn.Name = "dataReturDataGridViewTextBoxColumn";
-            this.dataReturDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // subcontractorDataGridViewTextBoxColumn
-            // 
-            this.subcontractorDataGridViewTextBoxColumn.DataPropertyName = "Subcontractor";
-            this.subcontractorDataGridViewTextBoxColumn.HeaderText = "Subcontractor";
-            this.subcontractorDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.subcontractorDataGridViewTextBoxColumn.Name = "subcontractorDataGridViewTextBoxColumn";
-            this.subcontractorDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // sediuDataGridViewTextBoxColumn
-            // 
-            this.sediuDataGridViewTextBoxColumn.DataPropertyName = "Sediu";
-            this.sediuDataGridViewTextBoxColumn.HeaderText = "Sediu";
-            this.sediuDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sediuDataGridViewTextBoxColumn.Name = "sediuDataGridViewTextBoxColumn";
-            this.sediuDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // coleteBindingSource
-            // 
-            this.coleteBindingSource.DataMember = "Colete";
-            this.coleteBindingSource.DataSource = this.courierDbDataSet;
-            // 
-            // courierDbDataSet
-            // 
-            this.courierDbDataSet.DataSetName = "courierDbDataSet";
-            this.courierDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // coleteTableAdapter
-            // 
-            this.coleteTableAdapter.ClearBeforeFill = true;
             // 
             // button1
             // 
@@ -302,29 +105,9 @@ namespace courier_project
             this.label2.TabIndex = 3;
             this.label2.Text = "Selectare zi:";
             // 
-            // sediiBindingSource
-            // 
-            this.sediiBindingSource.DataMember = "Sedii";
-            this.sediiBindingSource.DataSource = this.courierDbDataSet;
-            // 
-            // sediiTableAdapter
-            // 
-            this.sediiTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.ColeteTableAdapter = this.coleteTableAdapter;
-            this.tableAdapterManager.CurierSediiTableAdapter = null;
-            this.tableAdapterManager.CurierSubcontractoriTableAdapter = null;
-            this.tableAdapterManager.RuteTableAdapter = null;
-            this.tableAdapterManager.SediiTableAdapter = this.sediiTableAdapter;
-            this.tableAdapterManager.SubcontractoriTableAdapter = null;
-            this.tableAdapterManager.TarifTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = courier_project.courierDbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(65, 84);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(247, 22);
@@ -351,6 +134,7 @@ namespace courier_project
             // 
             // dateTimePicker2
             // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker2.Location = new System.Drawing.Point(385, 85);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(249, 22);
@@ -373,20 +157,243 @@ namespace courier_project
             this.button2.TabIndex = 11;
             this.button2.Text = "Calculare ramburs";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // textBox1
             // 
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(583, 157);
+            this.textBox1.Location = new System.Drawing.Point(568, 157);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.Size = new System.Drawing.Size(115, 22);
             this.textBox1.TabIndex = 12;
+            // 
+            // coleteBindingSource
+            // 
+            this.coleteBindingSource.DataMember = "Colete";
+            this.coleteBindingSource.DataSource = this.courierDbDataSet;
+            // 
+            // courierDbDataSet
+            // 
+            this.courierDbDataSet.DataSetName = "courierDbDataSet";
+            this.courierDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sediiBindingSource
+            // 
+            this.sediiBindingSource.DataMember = "Sedii";
+            this.sediiBindingSource.DataSource = this.courierDbDataSet;
+            // 
+            // sediiTableAdapter
+            // 
+            this.sediiTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.ColeteTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.CurierSediiTableAdapter = null;
+            this.tableAdapterManager.CurierSubcontractoriTableAdapter = null;
+            this.tableAdapterManager.RuteTableAdapter = null;
+            this.tableAdapterManager.SediiTableAdapter = null;
+            this.tableAdapterManager.SubcontractoriTableAdapter = null;
+            this.tableAdapterManager.TarifTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = courier_project.courierDbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // coleteTableAdapter1
+            // 
+            this.coleteTableAdapter1.ClearBeforeFill = true;
+            // 
+            // coleteDataGridView
+            // 
+            this.coleteDataGridView.AutoGenerateColumns = false;
+            this.coleteDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.coleteDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16,
+            this.dataGridViewTextBoxColumn17,
+            this.dataGridViewTextBoxColumn18,
+            this.dataGridViewTextBoxColumn19});
+            this.coleteDataGridView.DataSource = this.coleteBindingSource;
+            this.coleteDataGridView.Location = new System.Drawing.Point(12, 247);
+            this.coleteDataGridView.Name = "coleteDataGridView";
+            this.coleteDataGridView.RowHeadersWidth = 51;
+            this.coleteDataGridView.RowTemplate.Height = 24;
+            this.coleteDataGridView.Size = new System.Drawing.Size(783, 370);
+            this.coleteDataGridView.TabIndex = 12;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdColet";
+            this.dataGridViewTextBoxColumn1.HeaderText = "IdColet";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Expeditor";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Expeditor";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Destinatar";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Destinatar";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "TelefonExpeditor";
+            this.dataGridViewTextBoxColumn4.HeaderText = "TelefonExpeditor";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "TelefonDestinatar";
+            this.dataGridViewTextBoxColumn5.HeaderText = "TelefonDestinatar";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "OrasA";
+            this.dataGridViewTextBoxColumn6.HeaderText = "OrasA";
+            this.dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "OrasB";
+            this.dataGridViewTextBoxColumn7.HeaderText = "OrasB";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Masa";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Masa";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Categorie";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Categorie";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "CostTransport";
+            this.dataGridViewTextBoxColumn10.HeaderText = "CostTransport";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "TipCost";
+            this.dataGridViewTextBoxColumn11.HeaderText = "TipCost";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "ValoareRamburs";
+            this.dataGridViewTextBoxColumn12.HeaderText = "ValoareRamburs";
+            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "RambursColectat";
+            this.dataGridViewTextBoxColumn13.HeaderText = "RambursColectat";
+            this.dataGridViewTextBoxColumn13.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "RefuzColectat";
+            this.dataGridViewTextBoxColumn14.HeaderText = "RefuzColectat";
+            this.dataGridViewTextBoxColumn14.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "DataExpeditie";
+            this.dataGridViewTextBoxColumn15.HeaderText = "DataExpeditie";
+            this.dataGridViewTextBoxColumn15.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "DataLivrare";
+            this.dataGridViewTextBoxColumn16.HeaderText = "DataLivrare";
+            this.dataGridViewTextBoxColumn16.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.DataPropertyName = "DataRetur";
+            this.dataGridViewTextBoxColumn17.HeaderText = "DataRetur";
+            this.dataGridViewTextBoxColumn17.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.DataPropertyName = "Subcontractor";
+            this.dataGridViewTextBoxColumn18.HeaderText = "Subcontractor";
+            this.dataGridViewTextBoxColumn18.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.DataPropertyName = "Sediu";
+            this.dataGridViewTextBoxColumn19.HeaderText = "Sediu";
+            this.dataGridViewTextBoxColumn19.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.Width = 125;
             // 
             // ListareRetur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 555);
+            this.ClientSize = new System.Drawing.Size(807, 629);
+            this.Controls.Add(this.coleteDataGridView);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label5);
@@ -396,15 +403,15 @@ namespace courier_project
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "ListareRetur";
             this.Text = "ListareRetur";
             this.Load += new System.EventHandler(this.ListareRetur_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coleteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.courierDbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sediiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coleteDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coleteBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -413,29 +420,8 @@ namespace courier_project
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private courierDbDataSet courierDbDataSet;
         private System.Windows.Forms.BindingSource coleteBindingSource;
-        private courierDbDataSetTableAdapters.ColeteTableAdapter coleteTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idColetDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn expeditorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn destinatarDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefonExpeditorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn telefonDestinatarDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orasADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orasBDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn masaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categorieDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn costTransportDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipCostDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn valoareRambursDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn rambursColectatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn refuzColectatDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataExpeditieDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataLivrareDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataReturDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subcontractorDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sediuDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.BindingSource sediiBindingSource;
@@ -448,5 +434,27 @@ namespace courier_project
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.BindingSource coleteBindingSource1;
+        private courierDbDataSetTableAdapters.ColeteTableAdapter coleteTableAdapter1;
+        private System.Windows.Forms.DataGridView coleteDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
     }
 }
